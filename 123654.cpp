@@ -15,7 +15,7 @@ int main ()
 
 void Massiv (int data[], int size)
     {
-    $h; printf ("Заполнение массива:");
+    $h; printf ("Zapolnenie massiva:");
 
     for (int i = 0; i < size; i++)
         {
@@ -33,7 +33,7 @@ void Massiv (int data[], int size)
 void Postroenie (int data[], int size)
     {
     printf ("\n");
-    $h; printf ("Результат выполнения программы:");
+    $h; printf ("Resultat vipolneniya programmy:");
     printf ("\n");
 
     int n = 2;
