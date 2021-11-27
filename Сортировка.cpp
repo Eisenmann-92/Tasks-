@@ -4,6 +4,7 @@
 const int WidthWindow  = 1200,
           HeightWindow =  700;
 const HDC Knopki = txLoadImage ("Knopki.bmp");
+const HDC Osi = txLoadImage ("Osi.bmp");
 
 void FillArray (int data [], int size, int max);
 void SortingArray (int data [], int  size);
@@ -25,6 +26,7 @@ int main ()
     Menu (data, size, max);
 
     txDeleteDC (Knopki);
+    txDeleteDC (Osi);
     }
 
 void FillArray (int data [], int size, int max)
@@ -67,9 +69,11 @@ void OutputArray (int data [], int size)
 void DrawGraph (int data [], int Width, int Height, int size, int max, COLORREF color, int font)
     {
     int x = 100;
-    int y = HeightWindow - 200;
+    int y = HeightWindow - 180;
     int delX = (Width  - 400) / size;
     int delY = (Height - 400) / max;
+
+    txBitBlt (txDC (), 58, 0, 0, 0, Osi, 0, 0);
 
     txSetColor (color, font);
     txLine (x, y, x + delX, y - data [0] * delY);
